@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Andrés Ceballos — Desarrollador Web WordPress &amp; Automatización</title>
+<meta name="description" content="Soy Andrés Ceballos, desarrollador web enfocado en WordPress y automatización de procesos con IA. Más de 7 años creando sitios rápidos, posicionados y escalables.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="is-loading">
+
+<!-- ══════════════════════════════════════════════
+     DEVELOPER PRELOADER (2-LAYER DYNAMIC REVEAL)
+══════════════════════════════════════════════ -->
+<div class="preloader" id="preloader" aria-hidden="true">
+  <!-- Layer 2: Deep background layer -->
+  <div class="preloader-layer preloader-layer-bg"></div>
+  <!-- Layer 1: Front elevated layer with glowing bottom edge -->
+  <div class="preloader-layer preloader-layer-front"></div>
+
+  <!-- Terminal content -->
+  <div class="preloader-content" id="preloaderContent">
+    <div class="preloader-card">
+      <div class="preloader-card-header">
+        <div class="preloader-dots">
+          <span class="pre-dot red"></span>
+          <span class="pre-dot yellow"></span>
+          <span class="pre-dot green"></span>
+        </div>
+        <span class="preloader-filename">andres@terminal: ~/portfolio</span>
+        <span class="preloader-badge">INIT v2.6</span>
+      </div>
+
+      <div class="preloader-card-body">
+        <div class="preloader-code">
+          <div class="pre-line"><span class="pre-kw">const</span> <span class="pre-var">developer</span> = {</div>
+          <div class="pre-line indent"><span class="pre-prop">name:</span> <span class="pre-str">"Andrés Ceballos"</span>,</div>
+          <div class="pre-line indent"><span class="pre-prop">role:</span> <span class="pre-str">"Senior Web Developer"</span>,</div>
+          <div class="pre-line indent"><span class="pre-prop">focus:</span> [<span class="pre-str">"WordPress"</span>, <span class="pre-str">"SEO"</span>, <span class="pre-str">"Automation"</span>],</div>
+          <div class="pre-line indent"><span class="pre-prop">status:</span> <span class="pre-hl" id="preloaderStatusText">"loading_modules..."</span></div>
+          <div class="pre-line">};</div>
+        </div>
+
+        <div class="preloader-progress-box">
+          <div class="preloader-progress-track">
+            <div class="preloader-progress-fill" id="preloaderFill"></div>
+          </div>
+          <div class="preloader-counter">
+            <span class="preloader-msg" id="preloaderMsg">&gt; booting runtime...</span>
+            <span class="preloader-num"><span id="preloaderNum">0</span>%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Custom cursor -->
+<div class="cursor" id="cursor" aria-hidden="true">
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+  <span class="cursor-label"></span>
+</div>
+
+<!-- Noise overlay -->
+<div class="noise" aria-hidden="true"></div>
+
+<a class="skip-link" href="#main">Saltar al contenido</a>
+
+<header class="site-header" id="siteHeader">
+  <div class="wrap header-inner">
+    <a href="#top" class="logo" aria-label="Inicio">
+      <span class="logo-bracket">&lt;</span>AC<span class="logo-bracket"> /&gt;</span>
+    </a>
+    
+    <div class="header-right">
+      <button class="smooth-toggle" id="smoothToggle" aria-label="Alternar scroll suave" title="Alternar Scroll Suave">
+        <span class="toggle-led"></span>
+        <span class="toggle-text">Smooth: ON</span>
+      </button>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Abrir menú">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+
+    <nav class="site-nav" id="siteNav">
+      <a href="#sobre-mi" class="nav-link"><span class="nav-tag">&lt;</span>Sobre mí<span class="nav-tag">&gt;</span></a>
+      <a href="#experiencia" class="nav-link"><span class="nav-tag">&lt;</span>Experiencia<span class="nav-tag">&gt;</span></a>
+      <a href="#habilidades" class="nav-link"><span class="nav-tag">&lt;</span>Skills<span class="nav-tag">&gt;</span></a>
+      <a href="#proyectos" class="nav-link"><span class="nav-tag">&lt;</span>Proyectos<span class="nav-tag">&gt;</span></a>
+      <a href="#contacto" class="nav-link nav-cta"><span class="nav-tag">&lt;</span>Hablemos<span class="nav-tag"> /&gt;</span></a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ══════════════════════════════════════════════
+       HERO
+  ══════════════════════════════════════════════ -->
+  <section class="hero" id="top">
+    <div class="hero-bg-canvas" aria-hidden="true">
+      <canvas id="heroCanvas"></canvas>
+    </div>
+
+    <div class="wrap hero-inner">
+      <div class="hero-text">
+
+        <!-- IDE / Code header pill -->
+        <div class="code-editor-bar" aria-hidden="true">
+          <span class="code-dot dot-red"></span>
+          <span class="code-dot dot-yellow"></span>
+          <span class="code-dot dot-green"></span>
+          <span class="code-file">andres-ceballos.tsx &bull; role: fullstack-developer</span>
+        </div>
+
+        <p class="hero-tag" aria-label="Rol: Desarrollador Web Senior">
+          <span class="hero-tag-brace">&lt;</span>
+          <span class="hero-tag-text">role="Web Developer Senior"</span>
+          <span class="hero-tag-brace"> /&gt;</span>
+        </p>
+
+        <!-- Subtle opening H1 HTML tag -->
+        <div class="code-syntax-tag" aria-hidden="true">
+          &lt;<span class="tag-name">h1</span> <span class="tag-attr">class</span>=<span class="tag-val">"developer-intro"</span>&gt;
+        </div>
+
+        <!-- Updated H1 per user request -->
+        <h1 class="hero-title" aria-label="Soy Andrés Ceballos, desarrollador web enfocado en WordPress y automatización de procesos.">
+          <span class="hero-line" data-text="Soy Andrés Ceballos,">Soy Andrés Ceballos,</span>
+          <span class="hero-line hero-line-accent" data-text="desarrollador web">desarrollador web</span>
+          <span class="hero-line" data-text="enfocado en WordPress y">enfocado en WordPress y</span>
+          <span class="hero-line hero-line-sub" data-text="automatización de procesos.">automatización de procesos.</span>
+        </h1>
+
+        <!-- Subtle closing H1 HTML tag -->
+        <div class="code-syntax-tag close" aria-hidden="true">
+          &lt;/<span class="tag-name">h1</span>&gt;
+        </div>
+
+        <p class="hero-lead">
+          <span class="code-comment-inline" aria-hidden="true">// +7 años creando arquitecturas web resilientes</span><br>
+          Especializado en WordPress a medida, SEO técnico de alto rendimiento y flujos automatizados con IA para optimizar la productividad de tu equipo.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#proyectos" class="btn btn-primary">
+            <span>Ver proyectos</span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#contacto" class="btn btn-ghost">
+            <span>&lt;contacto /&gt;</span>
+          </a>
+        </div>
+
+        <div class="hero-stats" aria-label="Estadísticas clave">
+          <div class="stat">
+            <span class="stat-value"><span class="count" data-target="7">0</span>+</span>
+            <span class="stat-label">años de experiencia</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat">
+            <span class="stat-value">+<span class="count" data-target="50">0</span></span>
+            <span class="stat-label">sitios entregados</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat">
+            <span class="stat-value"><span class="count" data-target="3">0</span></span>
+            <span class="stat-label">países activos</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Audit panel -->
+      <div class="audit-panel" role="group" aria-label="Métricas PageSpeed Insights">
+        <div class="audit-header">
+          <span class="audit-label">&lt;<span class="tag-name">PageSpeed</span> <span class="tag-attr">audit</span>=<span class="tag-val">"100%"</span> /&gt;</span>
+          <span class="audit-url">andresceballos.dev</span>
+        </div>
+        <div class="gauges">
+          <button class="gauge" data-score="92" data-note="LCP, CLS e INP optimizados para carga instantánea, incluso en conexiones lentas.">
+            <span class="gauge-visual">
+              <svg viewBox="0 0 120 120" class="gauge-svg" aria-hidden="true">
+                <circle class="gauge-track" cx="60" cy="60" r="52"></circle>
+                <circle class="gauge-value" cx="60" cy="60" r="52" data-max="92"></circle>
+              </svg>
+              <span class="gauge-number"><span class="count" data-target="92">0</span></span>
+            </span>
+            <span class="gauge-label">Rendimiento</span>
+          </button>
+
+          <button class="gauge" data-score="100" data-note="Contraste, foco de teclado y semántica correcta desde el primer componente.">
+            <span class="gauge-visual">
+              <svg viewBox="0 0 120 120" class="gauge-svg" aria-hidden="true">
+                <circle class="gauge-track" cx="60" cy="60" r="52"></circle>
+                <circle class="gauge-value" cx="60" cy="60" r="52" data-max="100"></circle>
+              </svg>
+              <span class="gauge-number"><span class="count" data-target="100">0</span></span>
+            </span>
+            <span class="gauge-label">Accesibilidad</span>
+          </button>
+
+          <button class="gauge" data-score="100" data-note="HTTPS, buenas prácticas de imágenes y sin dependencias innecesarias.">
+            <span class="gauge-visual">
+              <svg viewBox="0 0 120 120" class="gauge-svg" aria-hidden="true">
+                <circle class="gauge-track" cx="60" cy="60" r="52"></circle>
+                <circle class="gauge-value" cx="60" cy="60" r="52" data-max="100"></circle>
+              </svg>
+              <span class="gauge-number"><span class="count" data-target="100">0</span></span>
+            </span>
+            <span class="gauge-label">Prácticas</span>
+          </button>
+
+          <button class="gauge" data-score="100" data-note="Jerarquía H1–H6, metadatos, enlazado interno y datos estructurados.">
+            <span class="gauge-visual">
+              <svg viewBox="0 0 120 120" class="gauge-svg" aria-hidden="true">
+                <circle class="gauge-track" cx="60" cy="60" r="52"></circle>
+                <circle class="gauge-value" cx="60" cy="60" r="52" data-max="100"></circle>
+              </svg>
+              <span class="gauge-number"><span class="count" data-target="100">0</span></span>
+            </span>
+            <span class="gauge-label">SEO</span>
+          </button>
+        </div>
+        <p class="audit-note" id="auditNote">Toca un medidor para ver qué hay detrás del número.</p>
+        <p class="audit-source">// Basado en auditorías Lighthouse y PageSpeed reales.</p>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator" aria-hidden="true">
+      <span class="scroll-line"></span>
+      <span class="scroll-text">&lt;scroll /&gt;</span>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       SOBRE MÍ
+  ══════════════════════════════════════════════ -->
+  <section class="section about" id="sobre-mi">
+    <div class="wrap">
+      <!-- Section syntax banner -->
+      <div class="section-code-banner" aria-hidden="true">
+        &lt;<span class="tag-name">section</span> <span class="tag-attr">id</span>=<span class="tag-val">"sobre-mi"</span> <span class="tag-attr">data-author</span>=<span class="tag-val">"Andres"</span>&gt;
+      </div>
+
+      <div class="section-head reveal-block">
+        <p class="section-eyebrow">
+          <span class="code-tag-sm">&lt;<span class="tag-name">span</span>&gt;</span>01 — Sobre mí<span class="code-tag-sm">&lt;/<span class="tag-name">span</span>&gt;</span>
+        </p>
+        <div class="code-syntax-tag" aria-hidden="true">&lt;<span class="tag-name">h2</span>&gt;</div>
+        <h2>Código que<br><em>realmente</em> funciona.</h2>
+        <div class="code-syntax-tag close" aria-hidden="true">&lt;/<span class="tag-name">h2</span>&gt;</div>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-main reveal-block">
+          <p class="about-lead">
+            Trabajo del lado del código y del lado del negocio: sitios personalizados en WordPress —hooks, campos con ACF, arquitectura pensada para performance y SEO desde el primer commit— y, cada vez más, automatización de los procesos que rodean a esos sitios.
+          </p>
+          <p class="about-body-text">
+            He llevado proyectos completos desde el mockup en Figma hasta producción, con mejoras medibles: hasta 50% menos tiempo de carga y más de 20% de crecimiento en tráfico orgánico. Colaboro con equipos en España, Panamá y Colombia, en español e inglés.
+          </p>
+
+          <div class="ai-block reveal-block">
+            <p class="ai-block-title">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="6.5" stroke="currentColor"/><path d="M7 4v3l2 1.5" stroke="currentColor" stroke-linecap="round"/></svg>
+              <span>&lt;<span class="tag-name">AIStack</span> /&gt;</span> en el día a día
+            </p>
+            <ul class="ai-list">
+              <li>ChatGPT, Claude CLI y Gemini para generar y revisar código más rápido.</li>
+              <li>Generación y optimización de contenido SEO asistida por IA.</li>
+              <li>Flujos en n8n y GoHighLevel: leads, alertas y notificaciones automatizadas.</li>
+            </ul>
+          </div>
+
+          <div class="about-facts reveal-block">
+            <div class="fact">
+              <p class="fact-value"><span class="count" data-target="7">0</span>+</p>
+              <p class="fact-label">años construyendo sitios</p>
+            </div>
+            <div class="fact">
+              <p class="fact-value"><span class="count" data-target="50">0</span>%</p>
+              <p class="fact-label">menos tiempo de carga</p>
+            </div>
+            <div class="fact">
+              <p class="fact-value"><span class="count" data-target="20">0</span>%+</p>
+              <p class="fact-label">más tráfico orgánico</p>
+            </div>
+          </div>
+        </div>
+
+        <aside class="about-side">
+          <div class="side-block reveal-block">
+            <p class="side-title">&lt;<span class="tag-name">Education</span> /&gt;</p>
+            <ul class="side-list">
+              <li><span class="side-when">2025</span><span>Curso de React.js — Platzi</span></li>
+              <li><span class="side-when">2023</span><span>Diploma en Desarrollo de Sistemas — U. El Bosque</span></li>
+              <li><span class="side-when">2016</span><span>Análisis y Desarrollo de Sistemas — SENA</span></li>
+              <li><span class="side-when">2014</span><span>Técnico en Sistemas — SENA</span></li>
+            </ul>
+          </div>
+          <div class="side-block reveal-block">
+            <p class="side-title">&lt;<span class="tag-name">Languages</span> /&gt;</p>
+            <div class="lang-bars">
+              <div class="lang-item">
+                <span class="lang-name">Español</span>
+                <div class="lang-bar"><div class="lang-fill" data-width="100"></div></div>
+                <span class="lang-level">Nativo</span>
+              </div>
+              <div class="lang-item">
+                <span class="lang-name">Inglés</span>
+                <div class="lang-bar"><div class="lang-fill" data-width="75"></div></div>
+                <span class="lang-level">B2 Profesional</span>
+              </div>
+            </div>
+          </div>
+          <div class="side-block reveal-block">
+            <p class="side-title">&lt;<span class="tag-name">Hobbies</span> /&gt;</p>
+            <div class="hobbies">
+              <span class="hobby-tag">🎸 Guitarra</span>
+              <span class="hobby-tag">🚴 Ciclismo</span>
+              <span class="hobby-tag">💪 Gimnasio</span>
+              <span class="hobby-tag">🧘 Meditación</span>
+              <span class="hobby-tag">✏️ Dibujo</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <div class="section-code-banner close" aria-hidden="true">
+        &lt;/<span class="tag-name">section</span>&gt;
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       EXPERIENCIA — pinned scroll
+  ══════════════════════════════════════════════ -->
+  <section class="section experience" id="experiencia">
+    <div class="wrap">
+      <div class="section-code-banner" aria-hidden="true">
+        &lt;<span class="tag-name">section</span> <span class="tag-attr">id</span>=<span class="tag-val">"experiencia"</span> <span class="tag-attr">type</span>=<span class="tag-val">"timeline"</span>&gt;
+      </div>
+
+      <div class="section-head reveal-block">
+        <p class="section-eyebrow">
+          <span class="code-tag-sm">&lt;<span class="tag-name">span</span>&gt;</span>02 — Experiencia<span class="code-tag-sm">&lt;/<span class="tag-name">span</span>&gt;</span>
+        </p>
+        <div class="code-syntax-tag" aria-hidden="true">&lt;<span class="tag-name">h2</span>&gt;</div>
+        <h2>Seis años y medio<br>en primera línea.</h2>
+        <div class="code-syntax-tag close" aria-hidden="true">&lt;/<span class="tag-name">h2</span>&gt;</div>
+        <p class="section-lead">Agencias, equipos internos y proyectos propios. En España, Colombia y Panamá.</p>
+      </div>
+    </div>
+
+    <div class="timeline-scroller" id="timelineScroller">
+      <div class="timeline-track" id="timelineTrack">
+
+        <article class="tl-card" data-index="0">
+          <div class="tl-card-inner">
+            <div class="card-code-tag" aria-hidden="true">&lt;<span class="tag-name">article</span> <span class="tag-attr">company</span>=<span class="tag-val">"Viva!"</span>&gt;</div>
+            <div class="tl-meta">
+              <span class="tl-period">mar 2026 — ago 2026</span>
+              <span class="tl-location">Barcelona, España</span>
+            </div>
+            <h3 class="tl-role">Desarrollador Web WordPress</h3>
+            <p class="tl-company">Viva!</p>
+            <ul class="tl-items">
+              <li>Desarrollo de sitios desde cero combinando page builders y código personalizado.</li>
+              <li>Implementación y configuración de ACF para campos y estructuras dinámicas.</li>
+              <li>Personalización de plugins y funcionalidades a medida.</li>
+            </ul>
+            <div class="tl-tags">
+              <span class="tl-tag">WordPress</span>
+              <span class="tl-tag">ACF</span>
+              <span class="tl-tag">PHP</span>
+            </div>
+            <div class="card-code-footer" aria-hidden="true">&lt;/<span class="tag-name">article</span>&gt;</div>
+          </div>
+        </article>
+
+        <article class="tl-card" data-index="1">
+          <div class="tl-card-inner">
+            <div class="card-code-tag" aria-hidden="true">&lt;<span class="tag-name">article</span> <span class="tag-attr">company</span>=<span class="tag-val">"ZenZales"</span>&gt;</div>
+            <div class="tl-meta">
+              <span class="tl-period">feb 2026 — actualmente</span>
+              <span class="tl-location">Bogotá, Colombia</span>
+            </div>
+            <h3 class="tl-role">Automatizador de Procesos</h3>
+            <p class="tl-company">ZenZales</p>
+            <ul class="tl-items">
+              <li>IA en GoHighLevel para categorizar leads automáticamente según sus respuestas.</li>
+              <li>Automatización de alertas y respuestas vía WhatsApp para seguimiento comercial.</li>
+              <li>Migración de flujos desde HubSpot y construcción de automatizaciones en n8n.</li>
+            </ul>
+            <div class="tl-tags">
+              <span class="tl-tag">n8n</span>
+              <span class="tl-tag">GoHighLevel</span>
+              <span class="tl-tag">IA</span>
+            </div>
+            <div class="card-code-footer" aria-hidden="true">&lt;/<span class="tag-name">article</span>&gt;</div>
+          </div>
+        </article>
+
+        <article class="tl-card" data-index="2">
+          <div class="tl-card-inner">
+            <div class="card-code-tag" aria-hidden="true">&lt;<span class="tag-name">article</span> <span class="tag-attr">company</span>=<span class="tag-val">"Artic"</span>&gt;</div>
+            <div class="tl-meta">
+              <span class="tl-period">jun 2025 — feb 2026</span>
+              <span class="tl-location">Barcelona, España</span>
+            </div>
+            <h3 class="tl-role">Desarrollador y Diseñador Web</h3>
+            <p class="tl-company">Artic</p>
+            <ul class="tl-items">
+              <li>UI/UX, animaciones y optimización técnica. +90 rendimiento, 100 accesibilidad en PageSpeed.</li>
+              <li>SEO on-page técnico: jerarquía de encabezados, metadatos, enlazado interno. 100 en SEO.</li>
+              <li>Optimización de Core Web Vitals: LCP, CLS e INP.</li>
+            </ul>
+            <div class="tl-tags">
+              <span class="tl-tag">UI/UX</span>
+              <span class="tl-tag">Core Web Vitals</span>
+              <span class="tl-tag">SEO</span>
+            </div>
+            <div class="card-code-footer" aria-hidden="true">&lt;/<span class="tag-name">article</span>&gt;</div>
+          </div>
+        </article>
+
+        <article class="tl-card" data-index="3">
+          <div class="tl-card-inner">
+            <div class="card-code-tag" aria-hidden="true">&lt;<span class="tag-name">article</span> <span class="tag-attr">company</span>=<span class="tag-val">"SiSeñor"</span>&gt;</div>
+            <div class="tl-meta">
+              <span class="tl-period">abr 2021 — may 2025</span>
+              <span class="tl-location">Colombia — Remoto</span>
+            </div>
+            <h3 class="tl-role">Desarrollador Web Full Stack</h3>
+            <p class="tl-company">SiSeñor Agencia</p>
+            <ul class="tl-items">
+              <li>Mockups y wireframes convertidos en sitios WordPress funcionales con múltiples builders.</li>
+              <li>+20% de tráfico orgánico con SEO avanzado y −50% en tiempos de carga.</li>
+              <li>QA riguroso de formularios e integraciones, comunicación directa en español e inglés.</li>
+            </ul>
+            <div class="tl-tags">
+              <span class="tl-tag">WordPress</span>
+              <span class="tl-tag">Elementor</span>
+              <span class="tl-tag">SEO</span>
+            </div>
+            <div class="card-code-footer" aria-hidden="true">&lt;/<span class="tag-name">article</span>&gt;</div>
+          </div>
+        </article>
+
+        <article class="tl-card" data-index="4">
+          <div class="tl-card-inner">
+            <div class="card-code-tag" aria-hidden="true">&lt;<span class="tag-name">article</span> <span class="tag-attr">company</span>=<span class="tag-val">"MundoSoft"</span>&gt;</div>
+            <div class="tl-meta">
+              <span class="tl-period">jun 2017 — jun 2019</span>
+              <span class="tl-location">Cali, Colombia</span>
+            </div>
+            <h3 class="tl-role">Desarrollador Web Full Stack</h3>
+            <p class="tl-company">MundoSoft</p>
+            <ul class="tl-items">
+              <li>Herramientas personalizadas en Laravel, Bootstrap y AngularJS para plataformas financieras.</li>
+              <li>Chatbot de respuestas automáticas que redujo tiempos de atención en 40%.</li>
+            </ul>
+            <div class="tl-tags">
+              <span class="tl-tag">Laravel</span>
+              <span class="tl-tag">AngularJS</span>
+              <span class="tl-tag">Bootstrap</span>
+            </div>
+            <div class="card-code-footer" aria-hidden="true">&lt;/<span class="tag-name">article</span>&gt;</div>
+          </div>
+        </article>
+
+        <article class="tl-card" data-index="5">
+          <div class="tl-card-inner">
+            <div class="card-code-tag" aria-hidden="true">&lt;<span class="tag-name">article</span> <span class="tag-attr">company</span>=<span class="tag-val">"ICESI"</span>&gt;</div>
+            <div class="tl-meta">
+              <span class="tl-period">may 2016 — dic 2016</span>
+              <span class="tl-location">Cali, Colombia</span>
+            </div>
+            <h3 class="tl-role">Desarrollador Web Junior</h3>
+            <p class="tl-company">Universidad ICESI</p>
+            <ul class="tl-items">
+              <li>Nuevas funcionalidades para el sistema de gestión de eventos de la universidad.</li>
+              <li>Sistema de inscripción con código de barras y PDFs: +50% de eficiencia.</li>
+            </ul>
+            <div class="tl-tags">
+              <span class="tl-tag">PHP</span>
+              <span class="tl-tag">JavaScript</span>
+              <span class="tl-tag">MySQL</span>
+            </div>
+            <div class="card-code-footer" aria-hidden="true">&lt;/<span class="tag-name">article</span>&gt;</div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+    <div class="wrap">
+      <div class="section-code-banner close" aria-hidden="true">
+        &lt;/<span class="tag-name">section</span>&gt;
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       HABILIDADES — interactive skill cloud
+  ══════════════════════════════════════════════ -->
+  <section class="section skills" id="habilidades">
+    <div class="wrap">
+      <div class="section-code-banner" aria-hidden="true">
+        &lt;<span class="tag-name">section</span> <span class="tag-attr">id</span>=<span class="tag-val">"skills"</span> <span class="tag-attr">data-level</span>=<span class="tag-val">"senior"</span>&gt;
+      </div>
+
+      <div class="section-head reveal-block">
+        <p class="section-eyebrow">
+          <span class="code-tag-sm">&lt;<span class="tag-name">span</span>&gt;</span>03 — Herramientas<span class="code-tag-sm">&lt;/<span class="tag-name">span</span>&gt;</span>
+        </p>
+        <div class="code-syntax-tag" aria-hidden="true">&lt;<span class="tag-name">h2</span>&gt;</div>
+        <h2>Lo que uso<br>según el proyecto.</h2>
+        <div class="code-syntax-tag close" aria-hidden="true">&lt;/<span class="tag-name">h2</span>&gt;</div>
+        <p class="section-lead">No una lista de todo lo que existe, sino lo que realmente domino.</p>
+      </div>
+
+      <div class="skills-arena" id="skillsArena">
+        <div class="skill-groups">
+          <div class="skill-group reveal-block" data-layer="0">
+            <p class="skill-group-title">&lt;<span class="tag-name">Frontend</span> /&gt;</p>
+            <div class="chips">
+              <span class="chip" data-depth="1.2">HTML</span>
+              <span class="chip" data-depth="1.4">CSS</span>
+              <span class="chip" data-depth="0.8">JavaScript</span>
+              <span class="chip" data-depth="1.6">React</span>
+              <span class="chip" data-depth="1.1">Angular</span>
+              <span class="chip" data-depth="0.9">Bootstrap</span>
+              <span class="chip" data-depth="1.3">SASS</span>
+            </div>
+          </div>
+          <div class="skill-group reveal-block" data-layer="1">
+            <p class="skill-group-title">&lt;<span class="tag-name">Backend</span> /&gt;</p>
+            <div class="chips">
+              <span class="chip" data-depth="1.5">PHP</span>
+              <span class="chip" data-depth="0.7">Node.js</span>
+              <span class="chip" data-depth="1.2">Laravel</span>
+              <span class="chip" data-depth="0.9">Java</span>
+            </div>
+          </div>
+          <div class="skill-group reveal-block" data-layer="2">
+            <p class="skill-group-title">&lt;<span class="tag-name">CMS_NoCode</span> /&gt;</p>
+            <div class="chips">
+              <span class="chip chip-primary" data-depth="2.0">WordPress</span>
+              <span class="chip" data-depth="1.4">Elementor Pro</span>
+              <span class="chip" data-depth="1.1">Astra Pro</span>
+              <span class="chip" data-depth="0.8">JetEngine</span>
+              <span class="chip" data-depth="1.3">Crocoblock</span>
+              <span class="chip" data-depth="1.0">WooCommerce</span>
+              <span class="chip" data-depth="0.7">Shopify</span>
+              <span class="chip" data-depth="0.9">Unbounce</span>
+            </div>
+          </div>
+          <div class="skill-group reveal-block" data-layer="3">
+            <p class="skill-group-title">&lt;<span class="tag-name">SEO_Perf</span> /&gt;</p>
+            <div class="chips">
+              <span class="chip chip-primary" data-depth="1.8">SEO técnico</span>
+              <span class="chip" data-depth="1.5">SEO on-page</span>
+              <span class="chip" data-depth="1.6">Core Web Vitals</span>
+              <span class="chip" data-depth="1.2">PageSpeed</span>
+            </div>
+          </div>
+          <div class="skill-group reveal-block" data-layer="4">
+            <p class="skill-group-title">&lt;<span class="tag-name">Automation</span> /&gt;</p>
+            <div class="chips">
+              <span class="chip" data-depth="1.7">n8n</span>
+              <span class="chip" data-depth="1.4">GoHighLevel</span>
+              <span class="chip" data-depth="1.1">APIs REST</span>
+              <span class="chip" data-depth="0.8">SQL</span>
+              <span class="chip" data-depth="1.0">PostgreSQL</span>
+              <span class="chip" data-depth="1.3">Git</span>
+            </div>
+          </div>
+          <div class="skill-group reveal-block" data-layer="5">
+            <p class="skill-group-title">&lt;<span class="tag-name">Design</span> /&gt;</p>
+            <div class="chips">
+              <span class="chip" data-depth="1.5">Figma</span>
+              <span class="chip" data-depth="1.1">Adobe XD</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-code-banner close" aria-hidden="true">
+        &lt;/<span class="tag-name">section</span>&gt;
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       PROYECTOS — horizontal scroll
+  ══════════════════════════════════════════════ -->
+  <section class="section projects" id="proyectos">
+    <div class="wrap">
+      <div class="section-code-banner" aria-hidden="true">
+        &lt;<span class="tag-name">section</span> <span class="tag-attr">id</span>=<span class="tag-val">"proyectos"</span> <span class="tag-attr">deploy</span>=<span class="tag-val">"production"</span>&gt;
+      </div>
+
+      <div class="section-head reveal-block">
+        <p class="section-eyebrow">
+          <span class="code-tag-sm">&lt;<span class="tag-name">span</span>&gt;</span>04 — Proyectos<span class="code-tag-sm">&lt;/<span class="tag-name">span</span>&gt;</span>
+        </p>
+        <div class="code-syntax-tag" aria-hidden="true">&lt;<span class="tag-name">h2</span>&gt;</div>
+        <h2>Sitios en<br>producción.</h2>
+        <div class="code-syntax-tag close" aria-hidden="true">&lt;/<span class="tag-name">h2</span>&gt;</div>
+        <p class="section-lead">Cada enlace abre el sitio real.</p>
+      </div>
+    </div>
+
+    <div class="projects-scroll-outer" id="projectsOuter">
+      <div class="projects-scroll-inner" id="projectsInner">
+
+        <a class="project-card" href="https://mentaltrainingschool.com/" target="_blank" rel="noopener" aria-label="Mental Training School — abrir sitio">
+          <div class="project-card-bg" style="--card-hue: 142deg;"></div>
+          <div class="project-card-body">
+            <div class="project-num" aria-hidden="true">
+              &lt;<span class="tag-name">project</span> <span class="tag-attr">id</span>=<span class="tag-val">"01"</span> /&gt;
+            </div>
+            <h3 class="project-name">Mental Training School</h3>
+            <p class="project-services">Ecommerce · UI/UX · WordPress</p>
+            <p class="project-desc">Plataforma de cursos y formación con tienda integrada, optimizada para conversión y velocidad.</p>
+            <div class="project-footer">
+              <span class="project-year">2025</span>
+              <span class="project-url">mentaltrainingschool.com ↗</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="project-card" href="https://isp.edu.pa/" target="_blank" rel="noopener" aria-label="International School of Panamá — abrir sitio">
+          <div class="project-card-bg" style="--card-hue: 213deg;"></div>
+          <div class="project-card-body">
+            <div class="project-num" aria-hidden="true">
+              &lt;<span class="tag-name">project</span> <span class="tag-attr">id</span>=<span class="tag-val">"02"</span> /&gt;
+            </div>
+            <h3 class="project-name">International School of Panamá</h3>
+            <p class="project-services">UI/UX · WordPress</p>
+            <p class="project-desc">Sitio institucional bilingüe para colegio internacional. Estructura SEO sólida y accesibilidad 100.</p>
+            <div class="project-footer">
+              <span class="project-year">2025</span>
+              <span class="project-url">isp.edu.pa ↗</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="project-card" href="https://tjuaninmo.com/" target="_blank" rel="noopener" aria-label="T. Juan Muñoz — abrir sitio">
+          <div class="project-card-bg" style="--card-hue: 35deg;"></div>
+          <div class="project-card-body">
+            <div class="project-num" aria-hidden="true">
+              &lt;<span class="tag-name">project</span> <span class="tag-attr">id</span>=<span class="tag-val">"03"</span> /&gt;
+            </div>
+            <h3 class="project-name">T. Juan Muñoz</h3>
+            <p class="project-services">UI/UX · WordPress</p>
+            <p class="project-desc">Inmobiliaria digital con búsqueda de propiedades personalizada y sistema de contacto.</p>
+            <div class="project-footer">
+              <span class="project-year">2025</span>
+              <span class="project-url">tjuaninmo.com ↗</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="project-card" href="https://pdvsa-adhoc.com/" target="_blank" rel="noopener" aria-label="PDVSA Ad Hoc — abrir sitio">
+          <div class="project-card-bg" style="--card-hue: 0deg;"></div>
+          <div class="project-card-body">
+            <div class="project-num" aria-hidden="true">
+              &lt;<span class="tag-name">project</span> <span class="tag-attr">id</span>=<span class="tag-val">"04"</span> /&gt;
+            </div>
+            <h3 class="project-name">PDVSA Ad Hoc</h3>
+            <p class="project-services">UI/UX · WordPress</p>
+            <p class="project-desc">Presencia digital corporativa con enfoque en credibilidad y experiencia de usuario clara.</p>
+            <div class="project-footer">
+              <span class="project-year">2024</span>
+              <span class="project-url">pdvsa-adhoc.com ↗</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="project-card" href="https://www.mrbono.co/" target="_blank" rel="noopener" aria-label="Mr Bono — abrir sitio">
+          <div class="project-card-bg" style="--card-hue: 270deg;"></div>
+          <div class="project-card-body">
+            <div class="project-num" aria-hidden="true">
+              &lt;<span class="tag-name">project</span> <span class="tag-attr">id</span>=<span class="tag-val">"05"</span> /&gt;
+            </div>
+            <h3 class="project-name">Mr Bono</h3>
+            <p class="project-services">UI/UX · WordPress</p>
+            <p class="project-desc">E-commerce de productos con diseño de marca fuerte y flujo de compra optimizado.</p>
+            <div class="project-footer">
+              <span class="project-year">2024</span>
+              <span class="project-url">mrbono.co ↗</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="project-card project-card-more" href="https://andresceballos.dev/" target="_blank" rel="noopener" aria-label="Ver portafolio completo">
+          <div class="project-card-bg" style="--card-hue: 190deg;"></div>
+          <div class="project-card-body">
+            <div class="project-num" aria-hidden="true">
+              &lt;<span class="tag-name">project</span> <span class="tag-attr">more</span>=<span class="tag-val">"true"</span> /&gt;
+            </div>
+            <h3 class="project-name">Y muchos más</h3>
+            <p class="project-services">SiSeñor Agencia · Vallolet · J. Cruz · Método Peniel · Lida Jois…</p>
+            <p class="project-desc">Ver el portafolio completo en mi sitio con todos los proyectos entregados.</p>
+            <div class="project-footer">
+              <span class="project-year">2016–2026</span>
+              <span class="project-url">andresceballos.dev ↗</span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+
+      <div class="projects-progress" aria-hidden="true">
+        <div class="projects-progress-fill" id="projectsProgressFill"></div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <div class="section-code-banner close" aria-hidden="true">
+        &lt;/<span class="tag-name">section</span>&gt;
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════
+       CONTACTO
+  ══════════════════════════════════════════════ -->
+  <section class="section contact" id="contacto">
+    <div class="wrap contact-inner">
+      <div class="section-code-banner" aria-hidden="true">
+        &lt;<span class="tag-name">section</span> <span class="tag-attr">id</span>=<span class="tag-val">"contacto"</span> <span class="tag-attr">status</span>=<span class="tag-val">"ready"</span>&gt;
+      </div>
+
+      <div class="contact-top reveal-block">
+        <p class="section-eyebrow">
+          <span class="code-tag-sm">&lt;<span class="tag-name">span</span>&gt;</span>05 — Contacto<span class="code-tag-sm">&lt;/<span class="tag-name">span</span>&gt;</span>
+        </p>
+        <div class="code-syntax-tag" aria-hidden="true">&lt;<span class="tag-name">h2</span>&gt;</div>
+        <h2 class="contact-title">Construyamos<br>algo sólido.</h2>
+        <div class="code-syntax-tag close" aria-hidden="true">&lt;/<span class="tag-name">h2</span>&gt;</div>
+        <p class="contact-lead">Cuéntame en qué estás trabajando y qué le cuesta más a tu sitio hoy: velocidad, posicionamiento o tiempo del equipo.</p>
+      </div>
+
+      <div class="contact-actions reveal-block">
+        <a class="btn btn-primary btn-large" href="mailto:andrescebvil@gmail.com">
+          <span>&lt;Escríbeme un correo /&gt;</span>
+          <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M2 4.5h14M2 9h8M2 13.5h5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </a>
+        <a class="btn btn-ghost btn-large" href="https://wa.me/573108912980" target="_blank" rel="noopener">
+          <span>WhatsApp // chat</span>
+        </a>
+      </div>
+
+      <div class="contact-links reveal-block">
+        <a href="mailto:andrescebvil@gmail.com" class="contact-link">
+          <span class="contact-link-label">mail()</span>
+          andrescebvil@gmail.com
+        </a>
+        <a href="https://github.com/afceballos" target="_blank" rel="noopener" class="contact-link">
+          <span class="contact-link-label">git()</span>
+          github.com/afceballos
+        </a>
+        <a href="https://www.linkedin.com/in/andres-felipe-ceballos/" target="_blank" rel="noopener" class="contact-link">
+          <span class="contact-link-label">link()</span>
+          Andrés Felipe Ceballos
+        </a>
+        <a href="https://instagram.com/soyandresc" target="_blank" rel="noopener" class="contact-link">
+          <span class="contact-link-label">ig()</span>
+          @soyandresc
+        </a>
+      </div>
+
+      <div class="section-code-banner close" aria-hidden="true">
+        &lt;/<span class="tag-name">section</span>&gt;
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p>&lt;<span class="tag-name">footer</span>&gt; Andrés Ceballos — Cali, Colombia &lt;/<span class="tag-name">footer</span>&gt;</p>
+    <p class="footer-built"><code>&lt;!-- Diseñado y construido a mano · <span id="footerYear"></span> --&gt;</code></p>
+  </div>
+</footer>
+
+<!-- Lenis Smooth Scroll -->
+<script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
